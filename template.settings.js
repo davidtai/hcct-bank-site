@@ -1,10 +1,10 @@
 module.exports = {
-  TITLE: 'SAFER.FANS',
-  TAG_LINE: 'SAFER.FANS',
+  TITLE: 'HCCT Bank',
+  TAG_LINE: 'HCCT Bank',
   HERO_IMAGE: '',
   SITE_LINK: '',
   FB_PIXEL: '',
-  GA_ID: 'UA-177859104-2',
+  GA_ID: '',
   THEME_FONTS: [
     '',
   ],
@@ -27,15 +27,15 @@ module.exports = {
     EOS: '',
   },
   OG: {
-    TITLE: 'SAFER.FANS',
-    DESCRIPTION: 'SAFER.FANS',
+    TITLE: 'HCCT Bank',
+    DESCRIPTION: 'HCCT Bank',
     IMAGE: '',
-    URL: 'https://safer.fans',
+    URL: 'https://hcct-bank-f4923f.netlify.app',
     TYPE: '',
   },
   TWITTER: {
-    TITLE: 'SAFER.FANS',
-    DESCRIPTION: 'SAFER.FANS',
+    TITLE: 'HCCT Bank',
+    DESCRIPTION: 'HCCT Bank',
     IMAGE: '',
     CARD: 'summary',
   }
