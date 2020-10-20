@@ -39,7 +39,8 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: 20,
     },
 
-    '& *': {
+    '& a': {
+      color: '#FFF',
     },
 
     '& button': {
@@ -102,9 +103,11 @@ const Header = ({openMenu}) => {
             </Grid>
             { !isBelowSM
                 && <Grid item xs>
-                  <Typography>
-                    Open an account
-                  </Typography>
+                  <Link href='/signup'>
+                    <Typography>
+                      Open an account
+                    </Typography>
+                  </Link>
                 </Grid>
             }
           </Grid>

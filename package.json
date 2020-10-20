@@ -46,6 +46,7 @@
     "react-in-viewport": "^1.0.0-alpha.14",
     "react-lazy-load-image-component": "1.5.0",
     "react-modal-video": "^1.2.6",
+    "react-password-strength-bar": "^0.3.2",
     "react-player": "2.6.2",
     "react-scroll": "^1.8.1",
     "react-share": "^4.3.1",

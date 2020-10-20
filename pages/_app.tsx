@@ -88,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   showHeader: {
-    backgroundColor: '#3E5AC5',
+    backgroundColor: '#11225A',
   },
   hideHeader: {
     backgroundColor: 'rgba(0, 0, 0, .2)',
@@ -166,7 +166,7 @@ const MyApp = ({ Component, pageProps }) => {
             }}
           />
         </div>
-        <div id='body' style={{height: '100vh'}}>
+        <div id='body' style={{height: '100vh', overflow: 'scroll'}}>
           <NoSsr>
             <div className={classnames(classes.header, ((showHeader || menu) ? classes.showHeader : classes.hideHeader))}>
               <Header

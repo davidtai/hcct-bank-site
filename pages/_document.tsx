@@ -63,7 +63,7 @@ export default class MyDocument extends Document {
           <link rel='stylesheet' href='/fonts/fonts.css' />
           <link rel='shortcut icon' href='/favicon-32x32.png' type='image/png'/>
           <link rel='manifest' href='/manifest.json' />
-          <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+          <link href="https://fonts.googleapis.com/css2?family=Lora:wght@300,400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
 
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />

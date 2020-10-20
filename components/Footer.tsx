@@ -17,7 +17,7 @@ import LogoTextImg from '../assets/logo-text.png'
 
 const useStyles = makeStyles((theme) => ({
   footer: {
-    backgroundColor: '#3E5AC5',
+    backgroundColor: '#11225A',
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
 

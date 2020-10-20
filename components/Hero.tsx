@@ -174,16 +174,18 @@ export default ({...props }) => {
               <strong>Start earning 3% today.</strong>
             </Typography>
             <br/>
-            <Button
-              className={classes.button}
-              size='small'
-              color='primary'
-              variant='contained'
-            >
-              <Typography>
-                Open an account
-              </Typography>
-            </Button>
+            <Link href='/signup'>
+              <Button
+                className={classes.button}
+                size='small'
+                color='primary'
+                variant='contained'
+              >
+                <Typography>
+                  Open an account
+                </Typography>
+              </Button>
+            </Link>
           </Grid>
           <Grid item xs={12} lg={4} className={classes.leftGrid}>
             <Card className={classes.topGap}>
