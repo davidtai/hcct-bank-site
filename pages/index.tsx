@@ -4,9 +4,6 @@ import {
   CardMedia,
   CardContent,
   Container,
-  ExpansionPanel,
-  ExpansionPanelSummary,
-  ExpansionPanelDetails,
   Fade,
   Grid,
   Grow,
@@ -36,6 +33,7 @@ import handleViewport from 'react-in-viewport'
 import classnames from 'classnames'
 
 import Hero from '../components/Hero'
+import CTACalls from '../components/CTACalls'
 import Vignette from '../components/Vignette'
 
 import EarnImg from '../assets/earn.jpg'
@@ -115,6 +113,11 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(2),
     paddingRight: theme.spacing(2),
   },
+  ctas: {
+    marginTop: -100,
+    position: 'relative',
+    padding: theme.spacing(8),
+  },
 }))
 
 const InViewport = handleViewport(({
@@ -187,6 +190,7 @@ export default ({showMenu, hideMenu}) => {
       <InViewport onEnter={hideMenu} onExit={showMenu}>
         <Hero/>
       </InViewport>
+      <CTACalls className={classes.ctas}/>
       <div className={classes.earn}>
         <Container maxWidth='lg' className={classes.fullHeight}>
           <Grid container alignItems='center' className={classnames(classes.fullHeight, classes.earnGrid)} spacing={8}>

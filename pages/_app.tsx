@@ -40,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
     minHeight: '100vh',
     width: '100vw',
     transition: 'all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
+    overflow: 'hidden',
 
     '& > *:first-child': {
       flex: 1,
@@ -92,6 +93,9 @@ const useStyles = makeStyles((theme) => ({
   },
   hideHeader: {
     backgroundColor: 'rgba(0, 0, 0, .2)',
+    [theme.breakpoints.down('sm')]: {
+      backgroundColor: '#11225A',
+    },
   },
   menu: {
     '& *': {

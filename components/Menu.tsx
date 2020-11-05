@@ -99,7 +99,7 @@ export default ({ isOpen, onOpenState, ...props }) => {
 
   return (
     <Menu
-      left
+      right
       disableAutoFocus
       isOpen={isOpen}
       styles={menuStyles}

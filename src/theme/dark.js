@@ -6,7 +6,7 @@ let theme = createMuiTheme({
   palette: {
     type: 'dark',
     primary: {
-      main: '#0B6EFD',
+      main: '#318DAF',
     },
     secondary: {
       main: '#1B4077',

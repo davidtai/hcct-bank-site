@@ -200,12 +200,12 @@ const Footer = () => {
             <br/>
             <br/>
             <Typography variant='caption' align='center'>
-              Investment products and services are offered through Forstmann & Co, a registered broker-dealer and investment advisor, member of <Link href='/'>FINRA(Opens Overlay)</Link> and <Link href='/'>SIPC(Opens Overlay)</Link>. Annuities are made available through Forstmann & Co, a licensed insurance agency, doing business as Forstmann & Co Services, Inc. in California.  Forstmann & Co and Forstmann & Co Services are affiliated companies under the common control of Forstmann & Co. Products not available in all states.
+              HCCT also offers an HCCT Spend deposit account. HCCT Spend accounts are FDIC insured up to $250,000. HCCT debit cards are issued by Lincoln Savings Bank, member FDIC for HCCT Spend account holders.  "Save and Invest" claim refers to a client's ability to utilize the HCCT Spend Instant Round-up feature to set aside small amounts of money from purchases made using an HCCT Spend account, and seamlessly investing those small amounts using an HCCT Investment account.  Requires both an active HCCT Spend account and an HCCT Investment account in good standing.  Instant Round-ups are accrued instantly for investment during the next trading window.
             </Typography>
             <br/>
             <br/>
             <Typography variant='caption' align='center'>
-            "HCCT" is the brand name for a banking and investment product and service offering.
+              "HCCT" is the brand name for a banking and investment product and service offering.
             </Typography>
             <br/>
             <br/>

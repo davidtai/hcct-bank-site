@@ -1,5 +1,6 @@
 import {
   Button,
+  Container,
   Grid,
   IconButton,
   Link,
@@ -23,8 +24,8 @@ const useStyles = makeStyles((theme) => ({
     width: '100vw',
     paddingLeft: 20,
     paddingRight: 20,
-    paddingTop: theme.spacing(1),
-    paddingBottom: theme.spacing(1),
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
     position: 'relative',
     zIndex: 1000,
 
@@ -49,6 +50,11 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     maxHeight: 40,
     display: 'inline-block',
+  },
+  logoText: {
+    fontFamily: 'Crimson Text, serif',
+    lineHeight: 1,
+    marginTop: -6,
   },
   logoLink: {
     display: 'block',
@@ -93,62 +99,58 @@ const Header = ({openMenu}) => {
 
   return (
     <div className={classes.header}>
-      <Grid container alignItems='center'>
-        <Grid item xs={3} md={4}>
-          <Grid container spacing={2} alignItems='center' className={classes.links}>
-            <Grid item>
-              <IconButton onClick={openMenu} className={classes.burger}>
-                <MenuIcon/>
-              </IconButton>
-            </Grid>
-            { !isBelowSM
-                && <Grid item xs>
-                  <Link href='/signup'>
-                    <Typography>
-                      Open an account
-                    </Typography>
-                  </Link>
+      <Container maxWidth='lg'>
+        <Grid container alignItems='center'>
+          <Grid item xs={4}>
+            <Link href='/' className={classes.logoLink}>
+              <Grid container spacing={1} alignItems='center' className={classes.links}>
+                <Grid item>
+                  <img src={LogoImg} alt='HCCT Bank' className={classes.logo}/>
                 </Grid>
-            }
-          </Grid>
-        </Grid>
-        <Grid item xs={6} md={4}>
-          <Link href='/' className={classes.logoLink}>
-            <Grid container spacing={2} alignItems='center' className={classes.links}>
-              <Grid item xs>
-              </Grid>
-              <Grid item>
-                <Typography variant='h5'>
-                  <strong>HCCT</strong>
-                </Typography>
-              </Grid>
-              <Grid item>
-                <img src={LogoImg} alt='Damon Motorcycles' className={classes.logo}/>
-              </Grid>
-              <Grid item xs>
-              </Grid>
-            </Grid>
-          </Link>
-        </Grid>
-        { !isBelowSM
-            && <Grid item xs={12} sm={4}>
-              <Grid container spacing={2} alignItems='center' className={classes.links}>
+                <Grid item>
+                  <Typography variant='h4' className={classes.logoText}>
+                    <strong>HCCT</strong>
+                  </Typography>
+                </Grid>
                 <Grid item xs>
                 </Grid>
-                <Grid item>
-                  <Typography>
-                    Contact us
-                  </Typography>
-                </Grid>
-                <Grid item>
-                  <Typography>
-                    Español
-                  </Typography>
+              </Grid>
+            </Link>
+          </Grid>
+          { !isBelowSM
+              && <Grid item xs={8}>
+                <Grid container spacing={2} alignItems='center' className={classes.links}>
+                  <Grid item xs>
+                  </Grid>
+                  <Grid item>
+                    <Typography>
+                      Contact us
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography>
+                      Español
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Link href='/signup'>
+                      <Typography>
+                        Open an account
+                      </Typography>
+                    </Link>
+                  </Grid>
                 </Grid>
               </Grid>
-            </Grid>
-        }
-      </Grid>
+          }
+          { !!isBelowSM
+              && <Grid item xs={8}>
+                <IconButton onClick={openMenu} className={classes.burger}>
+                  <MenuIcon/>
+                </IconButton>
+              </Grid>
+          }
+        </Grid>
+      </Container>
     </div>
   )
 }
