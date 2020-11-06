@@ -14,7 +14,6 @@ import Head from 'next/head'
 
 import React, { useEffect, useState } from 'react'
 import ReactGA from 'react-ga'
-import ReactFB from 'react-facebook-pixel'
 
 import CookieConsent /* , { Cookies } */ from 'react-cookie-consent'
 
@@ -32,6 +31,9 @@ import theme from '../src/theme/app'
 import {
   TITLE,
 } from '../template.settings'
+
+import '../styles/stripe-menu.scss'
+import 'react-modal-video/scss/modal-video.scss'
 
 const useStyles = makeStyles((theme) => ({
   body: {
@@ -137,11 +139,15 @@ const MyApp = ({ Component, pageProps }) => {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      ReactGA.initialize(GA_ID)
-      ReactFB.init(FB_ID)
+      import('react-facebook-pixel')
+        .then(module => module.default)
+        .then(ReactPixel => {
+          ReactPixel.init(FB_ID)
+          ReactPixel.pageView()
+        })
 
+      ReactGA.initialize(GA_ID)
       ReactGA.pageview(window.location.pathname + window.location.search)
-      ReactFB.pageView()
     }
 
     setTimeout(() => {

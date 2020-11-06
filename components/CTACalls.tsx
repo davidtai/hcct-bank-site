@@ -78,6 +78,11 @@ const CTACalls = ({...props}) => {
                     START EARNING
                   </Typography>
                 </Button>
+                <br/>
+                <br/>
+                <Link href='/'>
+                  Learn More &gt;&gt;&gt;
+                </Link>
               </CardContent>
             </Card>
           </Grid>
@@ -103,9 +108,13 @@ const CTACalls = ({...props}) => {
                 >
                   <Typography>
                     START SPENDING
-
                   </Typography>
                 </Button>
+                <br/>
+                <br/>
+                <Link href='/'>
+                  Learn More &gt;&gt;&gt;
+                </Link>
               </CardContent>
             </Card>
           </Grid>
@@ -130,9 +139,14 @@ const CTACalls = ({...props}) => {
                   variant='contained'
                 >
                   <Typography>
-                    START EARNING
+                    START SAVING
                   </Typography>
                 </Button>
+                <br/>
+                <br/>
+                <Link href='/'>
+                  Learn More &gt;&gt;&gt;
+                </Link>
               </CardContent>
             </Card>
           </Grid>

@@ -18,6 +18,7 @@ import React from 'react'
 import MenuIcon from '@material-ui/icons/Menu'
 
 import LogoImg from '../assets/logo-white.png'
+import AnimatedNavbar from '../components/StripeMenu/AnimatedNavbar'
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -123,21 +124,24 @@ const Header = ({openMenu}) => {
                   <Grid item xs>
                   </Grid>
                   <Grid item>
-                    <Typography>
-                      Contact us
-                    </Typography>
-                  </Grid>
-                  <Grid item>
-                    <Typography>
-                      Español
-                    </Typography>
-                  </Grid>
-                  <Grid item>
-                    <Link href='/signup'>
-                      <Typography>
-                        Open an account
-                      </Typography>
-                    </Link>
+                    {
+                      // <Typography>
+                      //   Contact us
+                      // </Typography>
+                    // </Grid>
+                    // <Grid item>
+                      // <Typography>
+                      //   Español
+                      // </Typography>
+                    // </Grid>
+                    // <Grid item>
+                      // <Link href='/signup'>
+                      //   <Typography>
+                      //     Open an account
+                      //   </Typography>
+                      // </Link>
+                    }
+                    <AnimatedNavbar duration={300}/>
                   </Grid>
                 </Grid>
               </Grid>

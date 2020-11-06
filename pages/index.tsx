@@ -34,6 +34,8 @@ import classnames from 'classnames'
 
 import Hero from '../components/Hero'
 import CTACalls from '../components/CTACalls'
+import LackOfSavings from '../components/LackOfSavings'
+import UXSliders from '../components/UXSliders'
 import Vignette from '../components/Vignette'
 
 import EarnImg from '../assets/earn.jpg'
@@ -118,6 +120,13 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     padding: theme.spacing(8),
   },
+  los: {
+    background: '#FFF',
+    padding: theme.spacing(12, 0),
+  },
+  uxSliders: {
+
+  },
 }))
 
 const InViewport = handleViewport(({
@@ -191,6 +200,8 @@ export default ({showMenu, hideMenu}) => {
         <Hero/>
       </InViewport>
       <CTACalls className={classes.ctas}/>
+      <LackOfSavings className={classes.los}/>
+      <UXSliders className={classes.uxSliders}/>
       <div className={classes.earn}>
         <Container maxWidth='lg' className={classes.fullHeight}>
           <Grid container alignItems='center' className={classnames(classes.fullHeight, classes.earnGrid)} spacing={8}>

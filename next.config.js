@@ -1,8 +1,7 @@
-const withSass = require('@zeit/next-sass')
+// const withCss = require('@zeit/next-css')
 const withTM = require('next-transpile-modules')(['midstream', 'shop.js', 'rc-countdown-flip', '@hanzo/middleware', '@hanzo/react'])
 
-module.exports = withSass(withTM({
-  cssModules: true,
+module.exports = withTM({
   webpack: (config) => {
     config.module.rules.push({
       test: /\.(eot|woff|woff2|ttf|webp|txt|jpg|png|jpeg|svg|gif|mp4|webm)$/,
@@ -21,4 +20,4 @@ module.exports = withSass(withTM({
 
     return config
   },
-}))
+})

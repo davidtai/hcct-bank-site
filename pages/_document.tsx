@@ -1,8 +1,6 @@
 import { ServerStyleSheets } from '@material-ui/core/styles'
 import Document, { Head, Main, NextScript } from 'next/document'
 import React from 'react'
-import ReactPixel from 'react-facebook-pixel'
-import ReactGA from 'react-ga'
 
 // https://www.youtube.com/watch?v=a33rb5BsX3Y&feature=emb_logo
 // linear-gradient(to bottom, #ff9700, #ff7900)
@@ -17,22 +15,6 @@ import {
 
 export default class MyDocument extends Document {
   componentDidMount() {
-    // https://www.npmjs.com/package/react-facebook-pixel
-    // const advancedMatching = { em: 'some@email.com' } // optional, more info: https://developers.facebook.com/docs/facebook-pixel/pixel-with-ads/conversion-tracking#advanced_match
-    const options = {
-      autoConfig: true, // set pixel's autoConfig
-      debug: false, // enable logs
-    }
-    ReactPixel.init(FB_PIXEL, options as any)
-
-    ReactPixel.pageView() // For tracking page view
-    // ReactPixel.track( event, data ) // For tracking default events, more info about events and data https://developers.facebook.com/docs/ads-for-websites/pixel-events/v2.9
-    // ReactPixel.trackCustom( event, data )// For tracking custom events
-
-    // https://github.com/react-ga/react-ga
-    ReactGA.initialize(GA_ID)
-
-    ReactGA.pageview(window.location.pathname + window.location.search)
   }
 
   render() {
