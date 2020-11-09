@@ -138,7 +138,7 @@ const UXSliders = ({...props}) => {
                 <Grid item xs={6}>
                   <FadeSlide direction='left'>
                     <FinancialProjections
-                      text='Comparison of interest earned over time'
+                      title='Comparison of interest earned over time'
                       categories={[
                         'Year 1',
                         'Year 2',
@@ -192,21 +192,14 @@ const UXSliders = ({...props}) => {
                 <Grid item xs={6}>
                   <FadeSlide direction='left'>
                     <FinancialProjections
-                      text='Earned savings'
-                      categories={[
-                        'Year 10',
-                        'Year 20',
-                        'Year 30',
-                        'Year 35',
-                        'Year 40',
-                        'Year 43',
-                      ]}
+                      title='Earned savings'
+                      xTitle='Years'
                       series={[{
                           name: 'Lincoln Dollar Retirement Account',
-                          data: [193576, 420452, 686356, 835999, 998003, 1101560],
+                          data: [[10, 193576], [20, 420452], [30, 686356], [35, 835999], [40, 998003], [43, 1101560]],
                         }, {
                           name: 'Status Quo',
-                          data: [51812, 153733, 354228, 518388, 748632, 929162],
+                          data: [[10, 51812], [20, 153733], [30, 354228], [35, 518388], [40, 748632], [43, 929162]],
                       }]}
                     />
                   </FadeSlide>
@@ -245,21 +238,14 @@ const UXSliders = ({...props}) => {
                 <Grid item xs={6}>
                   <FadeSlide direction='left'>
                     <FinancialProjections
-                      text='Earned savings'
-                      categories={[
-                        'Year 10',
-                        'Year 20',
-                        'Year 30',
-                        'Year 35',
-                        'Year 40',
-                        'Year 43',
-                      ]}
+                      title='Earned savings'
+                      xTitle='Years'
                       series={[{
                           name: 'Lincoln Dollar Student Loan Repayment Account',
-                          data: [193576, 420452, 686356, 835999, 998003, 1101560],
+                          data: [[10, 193576], [20, 420452], [30, 686356], [35, 835999], [40, 998003], [43, 1101560]],
                         }, {
                           name: 'Status Quo',
-                          data: [51812, 153733, 354228, 518388, 748632, 929162],
+                          data: [[10, 51812], [20, 153733], [30, 354228], [35, 518388], [40, 748632], [43, 929162]],
                       }]}
                     />
                   </FadeSlide>
@@ -298,21 +284,14 @@ const UXSliders = ({...props}) => {
                 <Grid item xs={6}>
                   <FadeSlide direction='left'>
                     <FinancialProjections
-                      text='Savings'
-                      categories={[
-                        'Year 10',
-                        'Year 20',
-                        'Year 30',
-                        'Year 35',
-                        'Year 40',
-                        'Year 43',
-                      ]}
+                      title='Savings'
+                      xTitle='Years'
                       series={[{
                           name: 'Lincoln Dollar Home Ownership Program',
-                          data: [177587,714033,1784564,2461297,3890459,4854390],
+                          data: [[10, 177587], [20, 714033], [30, 1784564], [35, 2461297], [40, 3890459], [43, 4854390]],
                         }, {
                           name: 'Status Quo',
-                          data: [29062, 129890, 328235, 453618, 718409, 897003],
+                          data: [[10, 29062], [20, 129890], [30, 328235], [35, 453618], [40, 718409], [43, 897003]],
                       }]}
                     />
                   </FadeSlide>

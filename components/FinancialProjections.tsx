@@ -1,7 +1,15 @@
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 
-const FinancialProjections = ({ text, categories, series, ...props }) => {
+const FinancialProjections = ({ title, series, ...props }) => {
+  const {
+    yFormat,
+    xFormat,
+    yTitle,
+    xTitle,
+    categories,
+  } = props
+
   const options = {
     chart: {
       type: 'spline',
@@ -9,7 +17,7 @@ const FinancialProjections = ({ text, categories, series, ...props }) => {
       backgroundColor: 'transparent',
     },
     title: {
-      text,
+      text: title,
       style: {
         fontSize: '2rem',
         color: '#1f243d',
@@ -32,18 +40,27 @@ const FinancialProjections = ({ text, categories, series, ...props }) => {
       //   to: 6.5,
       //   color: 'rgba(68, 170, 213, .2)'
       // }]
+      title: {
+        text: xTitle,
+      },
       labels: {
+        formatter: xFormat ?? function () { return (this as any).value },
         style: {
           fontSize: '16px',
         },
       },
+      lineWidth: 0,
+      minorGridLineWidth: 0,
+      lineColor: 'transparent',
+      minorTickLength: 0,
+      tickLength: 0
     },
     yAxis: {
       title: {
-        text: null,
+        text: yTitle,
       },
       labels: {
-        formatter: function () { return '$' + Highcharts.numberFormat((this as any).value, 0, '', ',') },
+        formatter: yFormat ?? function () { return '$' + Highcharts.numberFormat((this as any).value, 0, '', ',') },
         // format: '${value}',
         style: {
           fontSize: '16px',
