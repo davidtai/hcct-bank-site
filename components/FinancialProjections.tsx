@@ -43,7 +43,8 @@ const FinancialProjections = ({ text, categories, series, ...props }) => {
         text: null,
       },
       labels: {
-        format: '${value}',
+        formatter: function () { return '$' + Highcharts.numberFormat((this as any).value, 0, '', ',') },
+        // format: '${value}',
         style: {
           fontSize: '16px',
         },
