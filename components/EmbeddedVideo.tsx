@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     transform: 'translate(-50%, -50%)',
     color: '#FFF',
     fontSize: '5rem',
+    pointerEvents: 'none',
   },
 }))
 

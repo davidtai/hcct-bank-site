@@ -13,6 +13,7 @@ import {
   Card,
   CardContent,
   Container,
+  Fade,
   Grid,
   Link,
   Typography,
@@ -24,7 +25,8 @@ import {
 
 import classnames from 'classnames'
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import FadeSlide from './FadeSlide'
 
 import useMidstream from '../src/hooks'
 
@@ -126,6 +128,14 @@ export default ({...props }) => {
   const isBelowSM = useMediaQuery(theme.breakpoints.down('sm'))
   const isBelowMD = useMediaQuery(theme.breakpoints.down('md'))
 
+  const [initialFade, setInitialFade] = useState(false)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setInitialFade(true)
+    }, 500)
+  }, [])
+
   const {
     setUsername,
     setPassword,
@@ -148,7 +158,9 @@ export default ({...props }) => {
         maxWidth='lg'
         className={classes.container}
       >
-        <img src={HeroImg} className={classes.heroBackground}/>
+        <Fade in={ initialFade } timeout={{ enter: 1000 }}>
+          <img src={HeroImg} className={classes.heroBackground}/>
+        </Fade>
         <div
           className={classes.containerInner}
         >
@@ -159,24 +171,28 @@ export default ({...props }) => {
             spacing={isBelowSM ? 0 : 4}
           >
             <Grid item xs={12} md={6} className={classes.heroInfo}>
-              <Typography variant='h3' className={classes.h3}>
-                <strong>We the 99% can build wealth like the 1%.</strong>
-              </Typography>
-              <Typography variant='h6' className={classes.h6}>
-                “The Societal Gamechanger.” - Willie Brown
-              </Typography>
-              <Link href='/signup'>
-                <Button
-                  className={classes.button}
-                  size='small'
-                  color='primary'
-                  variant='contained'
-                >
-                  <Typography>
-                    Open an account
+              <FadeSlide direction='right' in={initialFade} duration={1500}>
+                <div>
+                  <Typography variant='h3' className={classes.h3}>
+                    We the 99% can build wealth like the 1%.
                   </Typography>
-                </Button>
-              </Link>
+                  <Typography variant='h6' className={classes.h6}>
+                    “The Societal Gamechanger.” - Willie Brown
+                  </Typography>
+                  <Link href='/signup'>
+                    <Button
+                      className={classes.button}
+                      size='small'
+                      color='primary'
+                      variant='contained'
+                    >
+                      <Typography>
+                        Open an account
+                      </Typography>
+                    </Button>
+                  </Link>
+                </div>
+              </FadeSlide>
             </Grid>
             <Grid item xs={12} md={2}>
             </Grid>

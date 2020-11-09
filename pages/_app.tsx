@@ -91,12 +91,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   showHeader: {
-    backgroundColor: '#11225A',
+    backgroundColor: '#1f243d',
   },
   hideHeader: {
     backgroundColor: 'rgba(0, 0, 0, .2)',
     [theme.breakpoints.down('sm')]: {
-      backgroundColor: '#11225A',
+      backgroundColor: '#1f243d',
     },
   },
   menu: {
@@ -155,8 +155,6 @@ const MyApp = ({ Component, pageProps }) => {
     }, 500)
   }, [])
 
-  console.log('header', showHeader)
-
   return (
     <>
       <Head>
@@ -188,13 +186,11 @@ const MyApp = ({ Component, pageProps }) => {
             <Component
               {...pageProps}
               showMenu={() => {
-                console.log('sh')
                 if (enable) {
                   setShowHeader(true)
                 }
               }}
               hideMenu={() => {
-                console.log('hh')
                 if (enable) {
                   setShowHeader(false)
                 }

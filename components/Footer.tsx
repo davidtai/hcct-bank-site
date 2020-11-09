@@ -14,12 +14,15 @@ import PinterestIcon from '@material-ui/icons/Pinterest'
 
 import LogoImg from '../assets/logo.png'
 import LogoTextImg from '../assets/logo-text.png'
+import BackgroundImg2 from '../assets/bg2.jpg'
 
 const useStyles = makeStyles((theme) => ({
   footer: {
-    backgroundColor: '#11225A',
+    // backgroundColor: '#11225A',
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
+    backgroundImage: `url(${BackgroundImg2})`,
+    backgroundSize: 'cover',
 
     color: '#fff',
 

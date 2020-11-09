@@ -13,7 +13,7 @@ import QuoteForm from '../components/QuoteForm'
 
 import darkTheme from '../src/theme/dark'
 
-import HeroBGImg from '../assets/hero-background.jpg'
+import HeroBGImg from '../assets/bg1.jpg'
 
 const useStyles = makeStyles((theme) => ({
   quote: {

@@ -1,5 +1,5 @@
 import { ServerStyleSheets } from '@material-ui/core/styles'
-import Document, { Head, Main, NextScript } from 'next/document'
+import Document, { Head, Html, Main, NextScript } from 'next/document'
 import React from 'react'
 
 // https://www.youtube.com/watch?v=a33rb5BsX3Y&feature=emb_logo
@@ -19,7 +19,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html lang='en'>
+      <Html lang='en'>
         <Head>
           {/* PWA primary color */}
           <meta charSet='utf-8' />
@@ -86,7 +86,7 @@ export default class MyDocument extends Document {
           </main>
           <NextScript />
         </body>
-      </html>
+      </Html>
     )
   }
 }

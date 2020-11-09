@@ -11,7 +11,7 @@ const SavingsChart = () => {
       text: 'How much do Americans save?',
       style: {
         fontSize: '2rem',
-        color: '#11225a',
+        color: '#1f243d',
       },
     },
     subtitle: {
@@ -50,7 +50,7 @@ const SavingsChart = () => {
       tickLength: 0
     },
     tooltip: {
-        valueSuffix: '%'
+      valueSuffix: '%'
     },
     plotOptions: {
       bar: {

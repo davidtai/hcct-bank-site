@@ -15,7 +15,7 @@ let theme = createMuiTheme({
       main: red.A400,
     },
     text: {
-      primary: '#11225a',
+      primary: '#1f243d',
     },
     background: {
       paper: '#FFF',
